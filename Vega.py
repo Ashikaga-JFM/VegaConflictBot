@@ -16,16 +16,16 @@ MONSTERARRAY = MONSTERARRAY.split(" ")
 MONSTERARRAY = [int(i) for i in MONSTERARRAY]
 
 # 各项找图的范围
-alertRegion = (616, 348, 1298, 730)  # 攻击高等级
+alertRegion = (868, 567, 1687, 995)  # 攻击高等级
 strikeRegion = (1122, 296, 1306, 361)  # 关闭闪击者
-repairRegion = (842, 894, 1084, 964)  # 每一回合后的维修
-finalRepairRegion = (1039, 965, 1167, 1067)  # 船爆之后的维修
+repairRegion = (1143, 1290, 1417, 1346)  # 每一回合后的维修
+finalRepairRegion = (1420, 1399, 1542, 1481)  # 船爆之后的维修
 noTargetRegion = (646, 366, 1283, 726)  # 无目标
-huhangRegion = (826, 351, 1123, 472)  # 只能护送自己的舰队
+huhangRegion = (1207, 570, 1317, 623)  # 只能护送自己的舰队
 spoilsRegion = (831, 128, 1083, 230)  # 关闭战利品
 underAttackRegion = (766, 360, 1132, 465)  # 关闭舰队遭到攻击
-joinRegion = (746, 963, 876, 1064)  # 底部的加入
-loadingRegion = (679, 287, 1190, 749)  # 切换星区加载界面
+joinRegion = (1020, 1400, 1147, 1481)  # 底部的加入
+loadingRegion = (1051, 588, 1503, 987)  # 切换星区加载界面
 # 鼠标点击的坐标
 FIND = (1635, 95)  # 找到（标记的船）
 ATTACK = (828, 1009)  # 攻击
