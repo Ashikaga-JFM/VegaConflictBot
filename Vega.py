@@ -16,28 +16,28 @@ MONSTERARRAY = MONSTERARRAY.split(" ")
 MONSTERARRAY = [int(i) for i in MONSTERARRAY]
 
 # 各项找图的范围
-alertRegion = (868, 567, 1687, 995)  # 攻击高等级
+alertRegion = (868, 567, 1687, 995)  # 攻击高等级---
 strikeRegion = (1122, 296, 1306, 361)  # 关闭闪击者
-repairRegion = (1143, 1290, 1417, 1346)  # 每一回合后的维修
-finalRepairRegion = (1420, 1399, 1542, 1481)  # 船爆之后的维修
-noTargetRegion = (646, 366, 1283, 726)  # 无目标
-huhangRegion = (1207, 570, 1317, 623)  # 只能护送自己的舰队
+repairRegion = (1143, 1290, 1417, 1346)  # 每一回合后的维修---
+finalRepairRegion = (1420, 1399, 1542, 1481)  # 船爆之后的维修---
+noTargetRegion = (646, 366, 1283, 726)  # 无目标---
+huhangRegion = (1207, 570, 1317, 623)  # 只能护送自己的舰队---
 spoilsRegion = (831, 128, 1083, 230)  # 关闭战利品
 underAttackRegion = (766, 360, 1132, 465)  # 关闭舰队遭到攻击
-joinRegion = (1020, 1400, 1147, 1481)  # 底部的加入
-loadingRegion = (1051, 588, 1503, 987)  # 切换星区加载界面
+joinRegion = (1020, 1400, 1147, 1481)  # 底部的加入---
+loadingRegion = (1051, 588, 1503, 987)  # 切换星区加载界面---
 # 鼠标点击的坐标
-FIND = (2161, 162)  # 找到（标记的船）
-ATTACK = (1082, 1439)  # 攻击
-REPAIR = (1280, 1318)  # 秒修
-REPAIRBROKEN = (1481, 1440)  # 船爆了之后的修复
-CLOSENOTARGET = (962, 669)  # 关闭找不到目标
-CLOSESTRIKE = (1440, 188)  # 关闭闪击者
-CLOSEALERT = (1411, 955)  # 锁定高等级警报
-RANDOMTIME = [0.15, 0.2]  # 设置每次点击后暂停几秒
+FIND = (2161, 162)  # 找到（标记的船）---
+ATTACK = (1082, 1439)  # 攻击---
+REPAIR = (1280, 1318)  # 秒修---
+REPAIRBROKEN = (1481, 1440)  # 船爆了之后的修复---
+CLOSENOTARGET = (1277, 957)  # 关闭找不到目标---
+CLOSESTRIKE = (2517, 79)  # 关闭闪击者
+CLOSEALERT = (1411, 955)  # 锁定高等级警报---
+RANDOMTIME = [0.15, 0.2]  # 设置每次点击后暂停几秒---
 CLOSEUNDERATTACK = (1057, 663)  # 关闭“舰队遭到攻击"
-huhang = (1280, 953)  # 关闭“只能护送自己的舰队” and 关闭“组团舰队异常危险”，这两个是同一个注意和关闭坐标
-CLOSE = (1436, 186)  # 关闭战利品、闪击者这类大窗口
+huhang = (1280, 953)  # 关闭“只能护送自己的舰队” and 关闭“组团舰队异常危险”，这两个是同一个注意和关闭坐标---
+CLOSE = (2517, 79)  # 关闭战利品、闪击者这类大窗口
 
 # 用于找船
 BookMarks = (2285, 79)  # 屏幕右上角的标签
