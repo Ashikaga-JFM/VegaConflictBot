@@ -61,7 +61,7 @@ def closeStrike():
     关闭闪击者
     :return:
     """
-    if pyautogui.locateOnScreen("img/strike.png", grayscale=True, confidence=0.95, region=strikeRegion) is not None:
+    if pyautogui.locateOnScreen("img2560 1600/strike.png", grayscale=True, confidence=0.95, region=strikeRegion) is not None:
         pyautogui.click(CLOSESTRIKE)
         time.sleep(random.uniform(RANDOMTIME[0], RANDOMTIME[1]))
 
@@ -70,29 +70,29 @@ while True:
     print("开始新一轮")
     for (i, j) in zip(SHIPARRAY, MONSTERARRAY):
         # 关闭找不到目标弹窗
-        if pyautogui.locateOnScreen("img/noTarget.png", grayscale=True, confidence=0.95,
+        if pyautogui.locateOnScreen("img2560 1600/noTarget.png", grayscale=True, confidence=0.95,
                                     region=noTargetRegion) is not None:
             pyautogui.click(CLOSENOTARGET)
             time.sleep(random.uniform(RANDOMTIME[0], RANDOMTIME[1]))
         # 关闭闪击者
-        if pyautogui.locateOnScreen("img/strike.png", grayscale=True, confidence=0.95, region=strikeRegion) is not None:
+        if pyautogui.locateOnScreen("img2560 1600/strike.png", grayscale=True, confidence=0.95, region=strikeRegion) is not None:
             pyautogui.click(CLOSESTRIKE)
             time.sleep(random.uniform(RANDOMTIME[0], RANDOMTIME[1]))
         # 关闭舰队遭到攻击
-        if pyautogui.locateOnScreen("img/underattack.png", grayscale=True, confidence=0.95,
+        if pyautogui.locateOnScreen("img2560 1600/underattack.png", grayscale=True, confidence=0.95,
                                     region=underAttackRegion) is not None:
             pyautogui.click(CLOSEUNDERATTACK)
             time.sleep(random.uniform(RANDOMTIME[0], RANDOMTIME[1]))
         # 关闭“只能护送自己的舰队”
-        if pyautogui.locateOnScreen("img/huhang.png", grayscale=True, confidence=0.95, region=huhangRegion) is not None:
+        if pyautogui.locateOnScreen("img2560 1600/huhang.png", grayscale=True, confidence=0.95, region=huhangRegion) is not None:
             pyautogui.click(huhang)
             time.sleep(random.uniform(RANDOMTIME[0], RANDOMTIME[1]))
         # 关闭高等级警报
-        if pyautogui.locateOnScreen("img/alert.png", grayscale=True, confidence=0.8, region=alertRegion) is not None:
+        if pyautogui.locateOnScreen("img2560 1600/alert.png", grayscale=True, confidence=0.8, region=alertRegion) is not None:
             pyautogui.click(CLOSEALERT)
             time.sleep(random.uniform(RANDOMTIME[0], RANDOMTIME[1]))
         # 关闭战利品
-        if pyautogui.locateOnScreen("img/spoils.png", grayscale=True, confidence=0.8, region=spoilsRegion) is not None:
+        if pyautogui.locateOnScreen("img2560 1600/spoils.png", grayscale=True, confidence=0.8, region=spoilsRegion) is not None:
             pyautogui.click(CLOSE)
             time.sleep(random.uniform(RANDOMTIME[0], RANDOMTIME[1]))
 
@@ -102,15 +102,15 @@ while True:
         pyautogui.press(str(i))
         time.sleep(1)  # 选中1后等一秒等修船信息跳出来
         # 如果该船正在战斗，则进入下一个船
-        if pyautogui.locateOnScreen("img/join.png", grayscale=True, confidence=0.9, region=joinRegion) is not None:
+        if pyautogui.locateOnScreen("img2560 1600/join.png", grayscale=True, confidence=0.9, region=joinRegion) is not None:
             continue
         # 如果可以免费修则修船
-        if pyautogui.locateOnScreen("img/repair.png", grayscale=True, confidence=0.9, region=repairRegion) is not None:
+        if pyautogui.locateOnScreen("img2560 1600/repair.png", grayscale=True, confidence=0.9, region=repairRegion) is not None:
             closeStrike()
             pyautogui.click(REPAIR)
             time.sleep(1)
         # 如果船已经爆了就在船厂点修复，然后退出程序
-        # if pyautogui.locateOnScreen("img/brokenRepair.png", grayscale=True, confidence=0.90,
+        # if pyautogui.locateOnScreen("img2560 1600/brokenRepair.png", grayscale=True, confidence=0.90,
         #                             region=finalRepairRegion) is not None:
         #     pyautogui.click(REPAIRBROKEN)
         #     sys.exit(0)
@@ -126,7 +126,7 @@ while True:
 
         # # 一直等待直到星区切换结束
         while (True):
-            if pyautogui.locateOnScreen("img/loading.png", grayscale=True, confidence=0.95,
+            if pyautogui.locateOnScreen("img2560 1600/loading.png", grayscale=True, confidence=0.95,
                                         region=loadingRegion) is None:
                 time.sleep(0.5)
                 break
@@ -138,18 +138,18 @@ while True:
         #     time.sleep(0.3)
 
         # 点击攻击,攻击之前需要判定是否真的是攻击（有可能这一秒已经变成了加入或者查看[怪被抢了]）,如果不是攻击，则回到起点
-        if pyautogui.locateOnScreen("img/attack.png", grayscale=True, confidence=0.95, region=joinRegion) is None:
+        if pyautogui.locateOnScreen("img2560 1600/attack.png", grayscale=True, confidence=0.95, region=joinRegion) is None:
             continue
         closeStrike()
         pyautogui.click(ATTACK)
         time.sleep(0.1)
         # 如果有则点击（高等级警报）确认
-        if pyautogui.locateOnScreen("img/alert.png", grayscale=True, confidence=0.8, region=alertRegion) is not None:
+        if pyautogui.locateOnScreen("img2560 1600/alert.png", grayscale=True, confidence=0.8, region=alertRegion) is not None:
             closeStrike()
             pyautogui.click(CLOSEALERT)
         time.sleep(random.uniform(RANDOMTIME[0], RANDOMTIME[1]))
         # 如果有则点击（组队舰队异常危险）确认
-        if pyautogui.locateOnScreen("img/huhang.png", grayscale=True, confidence=0.8, region=huhangRegion) is not None:
+        if pyautogui.locateOnScreen("img2560 1600/huhang.png", grayscale=True, confidence=0.8, region=huhangRegion) is not None:
             closeStrike()
             pyautogui.click(huhang)
         time.sleep(random.uniform(RANDOMTIME[0], RANDOMTIME[1]))
